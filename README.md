@@ -18,11 +18,9 @@ are displayed.
 
 ### Accuracy
 Accuracy is computed with the orthogonality metric $||Q^T Q - I_n||_1$ for each algorithm, which evaluates how close Q is to being orthogonal.
-Householder and Givens consistently maintain high orthogonality, with errors remaining close to machine precision, indicating their robustness in generating highly orthogonal matrices. Classical and Modified Gram-Schmidt show larger orthogonality errors across all cases.
 
 ### Performance
 Classical and Modified Gram-Schmidt perform significantly faster than Householder and Givens for smaller matrix dimensions. However, their speed advantage diminishes as matrix dimensions grow, with both methods eventually facing time limits. 
-Householder transformations remain moderately efficient for high orthogonality, although their runtime grows linearly with increasing matrix size. It outperforms Givens in terms of speed, especially for taller matrices (e.g., 3000×100). 
 Givens rotations method is the most computationally intensive and begin to exceed time limits as matrix size increases, particularly for Set B (wider matrices). 
 Givens' application is thus limited for large-scale problems.
 
